@@ -66,12 +66,73 @@
 /* 1. Estilos gerais
 /**********************************/
 
+html{
+	font-size: 62.5%;
+	font-family: var(--ff);
+	color: var(--clr-font);
+	transition: var(--transition);
+}
 
+body{
+	background-color: var(--clr-background);
+	transition: var(--transition);
+}
 
 /**********************************/
 /* 2. Navbar
 /**********************************/
 
+.navbar{
+	background-color: var(--clr-card);
+	transition: var(--transition);
+	min-height: 8.5rem;
+	padding: 1.6rem;
+	box-shadow: var(--shadow-card);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo{
+	fill: var(--clr-font);
+	transition: var(--transition);	
+}
+
+.switch{
+	display: flex;
+	align-items: center;
+	font-size: 1.8rem;
+}
+
+.switch_track{
+	background-color: var(--clr-switch-track);
+	display: block;
+	height: 2rem;
+	width: 4rem;
+	border-radius: 1rem;
+	cursor: pointer;
+	margin: 0 .2rem;
+}
+
+/*
+Pseudo elemento: Aparece na página mesmo não estando
+na estrutura HTML
+*/
+.switch_track::before{
+	content: "";
+	background-color: var(--clr-font);
+	transition: var(--transition);
+	display: block; /* O display block permite ao elemento aceitar width e height*/
+	width: 2rem;
+	height: 2rem;
+	border-radius: 1rem;
+	position: relative;
+	left: 0rem;
+}
+
+.switch_track--dark::before{
+	left: 2rem;
+}
 
 
 /**********************************/
